@@ -5,7 +5,8 @@ using sing_adapt_w61905.Models;
 using sing_adapt_w61905.Services;
 
 IReservationAdapter adapter = new ReservationAdapter();
-ReservationManager manager = ReservationManager.GetInstance();
+ReservationManager manager = ReservationManager.GetInstance(null);
+manager.SetAdapter(adapter);
 
 Console.Write("Podaj numer pokoju: ");
 string roomNumber = Console.ReadLine();
